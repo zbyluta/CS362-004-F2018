@@ -1,0 +1,50 @@
+        -:    0:Source:randomtestcard1.c
+        -:    0:Graph:randomtestcard1.gcno
+        -:    0:Data:randomtestcard1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "dominion.h"
+        -:    2:#include "dominion_helpers.h"
+        -:    3:#include <string.h>
+        -:    4:#include <stdio.h>
+        -:    5:#include <assert.h>
+        -:    6:#include "rngs.h"
+        -:    7:
+        1:    8:int checkSmithy(struct gameState *G, int handpos, int bonus){
+        1:    9:	int r = 0;
+        1:   10:	r = cardEffect(smithy, 0, 0, 0, G, handpos, &bonus);
+        1:   11:	assert(r == 0);
+        1:   12:}
+        -:   13:
+        1:   14:int main() {
+        -:   15:	int i, n, r, p, deckCount, discardCount, handCount;
+        1:   16:	int k[10] = {adventurer, council_room, feast, gardens, mine,
+        -:   17:		     remodel, smithy, village, baron, great_hall};
+        -:   18:	struct gameState G;
+        1:   19:	int handpos = 0, choice1 = 0, choice2 = 0 , choice3 = 0, bonus = 0;
+        1:   20:	printf("Testing Smithy Card. \n");
+        -:   21:
+        1:   22:	SelectStream(2);
+        1:   23:	PutSeed(3);
+        -:   24:
+        2:   25:	for (n = 0; n< 1; n++){
+    26301:   26:		for (i = 0; i< sizeof(struct gameState); i++){
+    26300:   27:			((char*)&G)[i] = floor(Random() * 256);
+        -:   28:		}
+        1:   29:		printf("test1 ");
+        1:   30:		p = floor(Random() *2 );
+        1:   31:		G.deckCount[p] = floor(Random() * MAX_DECK);
+        1:   32:		G.discardCount[p] = floor(Random() * MAX_DECK);
+        1:   33:		G.handCount[p] = floor(Random() * MAX_HAND);
+        1:   34:		G.playedCardCount = floor(Random() * MAX_DECK);
+        1:   35:		G.whoseTurn = 0;
+        1:   36:		G.numPlayers = 2;
+        1:   37:		printf("test2 \n");
+        1:   38:		checkSmithy(&G, handpos, bonus);
+        -:   39:		//cardEffect(adventurer, choice1, choice2, choice3, &G, handpos, &bonus);	
+        -:   40:	}	
+        1:   41:	printf("Tests Complete");
+        1:   42:	exit(0);
+        -:   43:
+        -:   44:
+        -:   45:}
