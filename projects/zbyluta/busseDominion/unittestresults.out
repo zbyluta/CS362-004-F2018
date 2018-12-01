@@ -1,0 +1,116 @@
+Results for Dominion tests:
+unittest1.c: 
+TESTING isGameOver():
+isGameOver = 0, expected = 0
+isGameOver = 1, expected = 1
+isGameOver = 0, expected = 0 
+isGameOver = 1, expected = 1
+All tests passed!
+File 'dominion.c'
+Lines executed:17.95% of 557
+Creating 'dominion.c.gcov'
+
+unittest2.c: 
+TESTING whoseTurn():
+whoseTurn = 0, expected = 0
+whoseTurn = 2, expected = 2
+whoseTurn = 1, expected = 1
+Testing Complete
+File 'dominion.c'
+Lines executed:18.31% of 557
+Creating 'dominion.c.gcov'
+
+unittest3.c: 
+---------TESTING endTurn():-----------
+Player 0 turn:
+whoseTurn = 0, expected = 0
+numActions = 1, expected = 1
+numBuys = 1, expected = 1
+coins = 4, expected = 3
+outpostPlayed = 0, expected = 0
+handCount Player 0 = 5, expected = 5
+handCount Player 1 = 0, expected = 0
+playedCardCount = 0, expected = 0
+Player 1 turn: 
+whoseTurn = 1, expected = 1
+numActions = 1, expected = 1
+numBuys = 1, expected = 1
+coins = 3, expected = 3
+outpostPlayed = 0, expected = 0
+handCount Player 0= 0, expected = 0
+handCount Player 1= 5, expected = 5
+playedCardCount = 0, expected = 0
+---------Testing Complete-------------
+File 'dominion.c'
+Lines executed:21.72% of 557
+Creating 'dominion.c.gcov'
+
+unittest4.c: 
+---------TESTING supplyCount():-----------
+numAdventurer = 10, expected = 10
+numCouncil_Room = 10, expected = 10
+numfeast = 10, expected = 10
+numGardens = 12, expected = 12
+numMine = 10, expected = 10
+numRemodel = 10, expected = 10
+numSmithy = 10, expected = 10
+numVillage = 10, expected = 10
+-----------------------
+numAdventurer = 7, expected = 7
+numCouncil_Room = 10, expected = 10
+numfeast = 10, expected = 10
+numGardens = 12, expected = 10
+numMine = 10, expected = 10
+numRemodel = 10, expected = 10
+numSmithy = 8, expected = 8
+numVillage = 5, expected = 5
+---------Testing Complete-------------
+File 'dominion.c'
+Lines executed:22.08% of 557
+Creating 'dominion.c.gcov'
+
+cardtest1.c: 
+----------------Testing Smithy Card---------------
+hand count = 8, expected = 7
+deck count = 1, expected = 2
+played card count = 1, expected = 1
+SUCCESS: Testing Complete
+---------------------------------------------------
+File 'dominion.c'
+Lines executed:27.11% of 557
+Creating 'dominion.c.gcov'
+
+cardtest2.c: 
+----------------Testing Adventurer Card---------------
+hand count = 7, expected = 5
+played card count = 0, expected = 0
+played card = 0
+
+SUCCESS: Testing Complete
+File 'dominion.c'
+Lines executed:29.26% of 557
+Creating 'dominion.c.gcov'
+
+cardtest3.c: 
+----------------Testing Village Card---------------
+hand count = 5, expected = 5
+played card count = 1, expected = 0
+number of actions = 3, expected = 3
+
+Testing Complete
+File 'dominion.c'
+Lines executed:29.98% of 557
+Creating 'dominion.c.gcov'
+
+cardtest4.c: 
+----------------Testing Council Room Card---------------
+hand count player 0 = 8, expected = 8
+hand count player 1 = 1, expected = 1
+played card count = 1, expected = 0
+number of buys = 2, expected = 2
+
+Testing Complete
+File 'dominion.c'
+Lines executed:31.42% of 557
+Creating 'dominion.c.gcov'
+
